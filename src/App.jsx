@@ -12,7 +12,7 @@ export default function App() {
   const { progress, isLoaded, isCriticalReady, imagesRef } = useImageSequence();
 
   return (
-    <div className="relative min-h-screen bg-[#08090D] text-white selection:bg-[#B8C5D9] selection:text-[#08090D]">
+    <div className="relative min-h-screen bg-white text-slate-900 selection:bg-slate-900 selection:text-white">
       {/* Preload Overlay Loading Screen */}
       <LoadingScreen
         progress={progress}

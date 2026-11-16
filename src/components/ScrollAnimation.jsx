@@ -239,17 +239,17 @@ export default function ScrollAnimation({ imagesRef, isCriticalReady, isLoaded }
     <section
       id="interactive-experience"
       ref={sectionRef}
-      className="relative w-full h-screen bg-[#08090D] overflow-hidden select-none flex flex-col justify-between"
+      className="relative w-full h-screen bg-slate-50/60 overflow-hidden select-none flex flex-col justify-between"
     >
       {/* Background Ambience */}
       <div className="absolute inset-0 bg-radial-hero pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#B8C5D9]/5 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-slate-200/40 rounded-full blur-[140px] pointer-events-none" />
 
       {/* Top Experience Header Bar */}
       <div className="relative z-20 w-full px-6 sm:px-12 pt-6 flex items-center justify-between pointer-events-none">
         <div className="flex items-center gap-3">
-          <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-[#A5A7B0]">
+          <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+          <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-slate-500 font-semibold">
             Interactive 360° Sequence
           </span>
         </div>
@@ -262,12 +262,12 @@ export default function ScrollAnimation({ imagesRef, isCriticalReady, isLoaded }
               onClick={() => scrollToChapter(idx)}
               className={`h-2 transition-all duration-300 rounded-full cursor-pointer relative group ${
                 idx === activeChapterIndex
-                  ? 'w-10 bg-white shadow-[0_0_12px_rgba(255,255,255,0.7)]'
-                  : 'w-2.5 bg-white/20 hover:bg-white/50'
+                  ? 'w-10 bg-slate-900 shadow-[0_0_12px_rgba(15,23,42,0.3)]'
+                  : 'w-2.5 bg-slate-300 hover:bg-slate-500'
               }`}
               title={`Jump to ${chap.badge}: ${chap.headline}`}
             >
-              <span className="absolute -top-7 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded bg-black/80 border border-white/10 text-[9px] font-mono text-white opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+              <span className="absolute -top-7 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded bg-slate-900 border border-slate-700 text-[9px] font-mono text-white opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-sm">
                 {chap.badge}
               </span>
             </button>
@@ -275,8 +275,8 @@ export default function ScrollAnimation({ imagesRef, isCriticalReady, isLoaded }
         </div>
 
         {/* Frame Counter HUD */}
-        <div className="text-[11px] font-mono tracking-wider text-[#A5A7B0] bg-white/5 border border-white/10 px-3 py-1 rounded-full backdrop-blur-md">
-          FRAME <span className="text-white font-semibold">{String(currentFrameNum).padStart(3, '0')}</span> / {TOTAL_FRAMES}
+        <div className="text-[11px] font-mono tracking-wider text-slate-500 bg-white/90 border border-slate-200/90 px-3 py-1 rounded-full backdrop-blur-md shadow-sm">
+          FRAME <span className="text-slate-950 font-bold">{String(currentFrameNum).padStart(3, '0')}</span> / {TOTAL_FRAMES}
         </div>
       </div>
 
@@ -288,7 +288,7 @@ export default function ScrollAnimation({ imagesRef, isCriticalReady, isLoaded }
       >
         <canvas
           ref={canvasRef}
-          className="w-full h-full object-contain filter contrast-[1.02] drop-shadow-[0_20px_50px_rgba(0,0,0,0.9)]"
+          className="w-full h-full object-contain filter contrast-[1.02] drop-shadow-[0_20px_50px_rgba(0,0,0,0.35)]"
         />
 
         {/* Dynamic Storytelling Text Overlays */}
@@ -305,19 +305,19 @@ export default function ScrollAnimation({ imagesRef, isCriticalReady, isLoaded }
                 }`}
               >
                 {/* Chapter Badge */}
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/15 text-[11px] font-mono tracking-[0.2em] text-[#B8C5D9] uppercase mb-3 backdrop-blur-md shadow-lg">
-                  <span>{chapter.badge}</span>
-                  <span className="text-white/30">•</span>
-                  <span className="text-white/90">{chapter.highlight}</span>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/95 border border-slate-200/90 text-[11px] font-mono tracking-[0.2em] text-slate-700 uppercase mb-3 backdrop-blur-md shadow-md">
+                  <span className="font-semibold">{chapter.badge}</span>
+                  <span className="text-slate-300">•</span>
+                  <span className="text-slate-900 font-medium">{chapter.highlight}</span>
                 </div>
 
                 {/* Chapter Headline */}
-                <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-2 leading-tight">
+                <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-950 mb-2 leading-tight">
                   {chapter.headline}
                 </h2>
 
                 {/* Chapter Description */}
-                <p className="text-sm sm:text-base text-[#A5A7B0] max-w-md font-normal leading-relaxed">
+                <p className="text-sm sm:text-base text-slate-600 max-w-md font-normal leading-relaxed">
                   {chapter.description}
                 </p>
               </div>
@@ -330,17 +330,17 @@ export default function ScrollAnimation({ imagesRef, isCriticalReady, isLoaded }
       <div className="relative z-20 w-full px-6 sm:px-12 pb-6 flex flex-col items-center">
         <div
           onClick={handleScrubClick}
-          className="w-full max-w-md bg-white/10 h-2 rounded-full overflow-hidden relative mb-2 cursor-pointer group pointer-events-auto"
+          className="w-full max-w-md bg-slate-200 h-2 rounded-full overflow-hidden relative mb-2 cursor-pointer group pointer-events-auto border border-slate-300/40"
           title="Click to jump to scroll position"
         >
           <div
-            className="h-full bg-gradient-to-r from-white/30 via-[#B8C5D9] to-white transition-all duration-75 ease-out group-hover:brightness-125"
+            className="h-full bg-gradient-to-r from-slate-600 via-slate-900 to-slate-700 transition-all duration-75 ease-out group-hover:brightness-125"
             style={{ width: `${scrollPercentage}%` }}
           />
         </div>
-        <div className="w-full max-w-md flex justify-between items-center text-[10px] font-mono text-[#A5A7B0]">
+        <div className="w-full max-w-md flex justify-between items-center text-[10px] font-mono text-slate-500">
           <span>01 INTRO</span>
-          <span className="text-white font-medium">CLICK OR SCROLL TO ROTATE</span>
+          <span className="text-slate-900 font-semibold">CLICK OR SCROLL TO ROTATE</span>
           <span>05 FINALE</span>
         </div>
       </div>

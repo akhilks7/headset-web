@@ -1,17 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --bg-dark: #08090D;
-  --bg-card: #111319;
-  --text-primary: #FFFFFF;
-  --text-secondary: #A5A7B0;
-  --accent: #B8C5D9;
-  --border-subtle: rgba(255, 255, 255, 0.12);
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --text-primary: #0F172A;
+  --text-secondary: #64748B;
+  --accent: #0F172A;
+  --border-subtle: rgba(0, 0, 0, 0.08);
 }
 
 body {
-  background-color: #08090D;
-  color: #FFFFFF;
+  background-color: #FFFFFF;
+  color: #0F172A;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   overflow-x: hidden;
 }
@@ -25,41 +26,42 @@ h1, h2, h3, h4, .font-heading {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #08090D;
+  background: #F8FAFC;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(184, 197, 217, 0.2);
+  background: rgba(15, 23, 42, 0.2);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(184, 197, 217, 0.4);
+  background: rgba(15, 23, 42, 0.35);
 }
 
-/* Glassmorphism helpers */
+/* Glassmorphism helpers for Light Theme */
 .glass-nav {
-  background: rgba(8, 9, 13, 0.75);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .glass-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+  background: #FFFFFF;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04);
 }
 
 .glass-card:hover {
-  border-color: rgba(184, 197, 217, 0.25);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border-color: rgba(15, 23, 42, 0.18);
+  box-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.08);
 }
 
 .glow-ambient {
-  box-shadow: 0 0 100px -20px rgba(184, 197, 217, 0.12);
+  box-shadow: 0 0 100px -20px rgba(0, 0, 0, 0.06);
 }
 
 /* Radial gradient background highlights */
 .bg-radial-hero {
-  background: radial-gradient(circle at 50% 40%, rgba(184, 197, 217, 0.06) 0%, transparent 65%);
+  background: radial-gradient(circle at 50% 40%, rgba(15, 23, 42, 0.03) 0%, transparent 65%);
 }
