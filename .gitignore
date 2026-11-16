@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Production build outputs
+dist/
+dist-ssr/
+
+# Environment and local files
+.env
+.env.local
+.env.*.local
+*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Source raw archive (frames are stored in public/assets/frames/)
+*.zip
